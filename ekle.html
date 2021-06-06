@@ -1,0 +1,41 @@
+<html lang="tr" >
+	<head>
+		<title>WEBSİTE SİPARİŞ</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	</head>
+	<body>
+		<center>
+		<div class="menu">
+			<ul class="menu-ul">
+				<li class="menu-item">
+					<a class="menu-link" href="index.html">Ana Sayfa</a>
+				</li>
+				<li class="menu-item">
+					<a class="menu-link active" href="ekle.html">Kayıt Ekle</a>
+				</li>
+				<li class="menu-item">
+					<a class="menu-link" href="liste.html">Kayıtlar</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div>
+			<p class="baslik">KAYIT EKLE</p>
+			<form class="kayit">
+				<input type="text" id="nick" placeholder="Ad Soyad" />
+				<input type="text" id="tur" placeholder="WebSite Türü" /><br/>
+				<span>Sipariş Tarihi</span>
+				<input style="width: 43%; border: none;" type="date" id="siparis" placeholder="Sipariş Tarihi" /><br/>
+				<span>Teslim Tarihi</span>
+				<input style="width: 43%; border: none;" type="date" id="teslim" placeholder="Teslim Tarihi" /><br/>
+				<input type="button" class="ekle" value="Kayıt Ekle" />
+			</form>
+		</div>
+
+		</center>
+		<script src="js/liste.js"></script>
+	</body>
+</html>
