@@ -1,31 +1,19 @@
 $(document).ready(function() {
-    $(".ekle").click(function() {
-        var nickname = $("#nick").val().trim();
-        var site = $("#tur").val().trim();
-        var sip = $("#siparis").val();
-        var tes = $("#teslim").val();
+    var orders = JSON.parse(localStorage.getItem("orders")) || [];
 
-        // Boş alan kontrolü
-        if (!nickname || !site || !sip || !tes) {
-            alert("Please fill in all fields.");
-            return;
-        }
-
-        // Mevcut siparişleri al
-        var orders = JSON.parse(localStorage.getItem("orders")) || [];
-
-        // Yeni siparişi ekle
-        orders.push({
-            nickname: nickname,
-            site: site,
-            siparis: sip,
-            teslim: tes
+    if (orders.length === 0) {
+        $(".order-list").html("<p>No orders found.</p>");
+    } else {
+        orders.forEach(function(order, index) {
+            $(".order-list").append(`
+                <div class="order">
+                    <p><strong>Name:</strong> ${order.nickname}</p>
+                    <p><strong>Website Type:</strong> ${order.site}</p>
+                    <p><strong>Order Date:</strong> ${order.siparis}</p>
+                    <p><strong>Delivery Date:</strong> ${order.teslim}</p>
+                </div>
+                <hr/>
+            `);
         });
-
-        // Güncellenmiş siparişleri kaydet
-        localStorage.setItem("orders", JSON.stringify(orders));
-
-        // Liste sayfasına yönlendirme
-        window.location.href = "liste.html";
-    });
+    }
 });
