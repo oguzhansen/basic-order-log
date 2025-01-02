@@ -1,22 +1,31 @@
-$(document).ready(function()
-{
-	var nickname = localStorage.getItem("nick");
-	var site = localStorage.getItem("site");
-	var sip = localStorage.getItem("siparis");
-	var tes = localStorage.getItem("teslim");
+$(document).ready(function() {
+    $(".ekle").click(function() {
+        var nickname = $("#nick").val().trim();
+        var site = $("#tur").val().trim();
+        var sip = $("#siparis").val();
+        var tes = $("#teslim").val();
 
-	$(".ekle").click(function()
-	{
-		var nickname = $("#nick").val();
-		var site = $("#tur").val();
-		var sip = $("#siparis").val();
-		var tes = $("#teslim").val();
-		localStorage.setItem("nick",nickname);
-		localStorage.setItem("site",site);
-		localStorage.setItem("siparis",sip);
-		localStorage.setItem("teslim",tes);
+        // Boş alan kontrolü
+        if (!nickname || !site || !sip || !tes) {
+            alert("Please fill in all fields.");
+            return;
+        }
 
-		window.location.href = "liste.html";
+        // Mevcut siparişleri al
+        var orders = JSON.parse(localStorage.getItem("orders")) || [];
 
-	});
+        // Yeni siparişi ekle
+        orders.push({
+            nickname: nickname,
+            site: site,
+            siparis: sip,
+            teslim: tes
+        });
+
+        // Güncellenmiş siparişleri kaydet
+        localStorage.setItem("orders", JSON.stringify(orders));
+
+        // Liste sayfasına yönlendirme
+        window.location.href = "liste.html";
+    });
 });
