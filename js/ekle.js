@@ -26,6 +26,6 @@ $(document).ready(function() {
         localStorage.setItem("orders", JSON.stringify(orders));
 
         // Liste sayfasına yönlendirme
-        window.location.href = "liste.html";
+        window.location.href = "index.html";
     });
 });
