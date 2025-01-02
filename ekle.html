@@ -1,38 +1,38 @@
-<html lang="tr" >
-	<head>
-		<title>My Order Log</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/style.css">
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	</head>
-	<body>
-		<center>
-		<div class="menu">
-			<ul class="menu-ul">
-				<li class="menu-item">
-					<a class="menu-link" href="index.html">Home</a>
-				</li>
-				<li class="menu-item">
-					<a class="menu-link active" href="ekle.html">Add Order</a>
-				</li>
-			</ul>
-		</div>
-		
-		<div>
-			<p class="baslik">Add Order</p>
-			<form class="kayit">
-				<input type="text" id="nick" placeholder="Name" />
-				<input type="text" id="tur" placeholder="WebSite Type" /><br/>
-				<span>Order Date:</span>
-				<input style="width: 43%; border: none;" type="date" id="siparis" placeholder="Order Date" /><br/>
-				<span>Delivery Date:</span>
-				<input style="width: 43%; border: none;" type="date" id="teslim" placeholder="Delivery Date" /><br/>
-				<input type="button" class="ekle" value="Add Order" />
-			</form>
-		</div>
-
-		</center>
-		<script src="js/liste.js"></script>
-	</body>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>My Order Log</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <center>
+        <div class="menu">
+            <ul class="menu-ul">
+                <li class="menu-item">
+                    <a class="menu-link" href="index.html">Home</a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link active" href="ekle.html">Add Order</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <p class="baslik">Add Order</p>
+            <form class="kayit">
+                <input type="text" id="nick" placeholder="Name" />
+                <input type="text" id="tur" placeholder="Website Type" /><br/>
+                <span>Order Date:</span>
+                <input type="date" id="siparis" class="form-input" placeholder="Order Date" /><br/>
+                <span>Delivery Date:</span>
+                <input type="date" id="teslim" class="form-input" placeholder="Delivery Date" /><br/>
+                <input type="button" class="ekle" value="Add Order" />
+            </form>
+        </div>
+    </center>
+    <script src="js/ekle.js"></script>
+</body>
 </html>
