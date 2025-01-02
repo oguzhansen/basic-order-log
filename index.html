@@ -1,43 +1,30 @@
-<html lang="tr" >
-	<head>
-		<title>My Order Log</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<center>
-		<div class="menu">
-			<ul class="menu-ul">
-				<li class="menu-item">
-					<a class="menu-link active" href="index.html">Home</a>
-				</li>
-				<li class="menu-item">
-					<a class="menu-link" href="ekle.html">Add Order</a>
-				</li>
-			</ul>
-		</div>
-		<table class="liste">
-			<tr id="list">
-				<th style="padding: 10px;">Name</th>
-				<th style="padding: 10px;">Website Type</th>
-				<th style="padding: 10px;">Order Date</th>
-				<th style="padding: 10px;">Delivery Date</th><br/>
-			</tr>
-			<tr>
-				<th id="resul"></th>
-				<th id="result"></th>
-				<th id="result1"></th>
-				<th id="result2"></th><br/>
-			</tr>
-		</table>
-	</center>
-	<script>
-			document.getElementById("resul").innerHTML=localStorage.getItem("nick");
-			document.getElementById("result").innerHTML=localStorage.getItem("site");
-			document.getElementById("result1").innerHTML=localStorage.getItem("siparis");
-			document.getElementById("result2").innerHTML=localStorage.getItem("teslim");
-	</script>
-			<script src="js/liste.js"></script>
-	</body>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Order List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <center>
+        <div class="menu">
+            <ul class="menu-ul">
+                <li class="menu-item">
+                    <a class="menu-link active" href="index.html">Home</a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href="ekle.html">Add Order</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <p class="baslik">Order List</p>
+            <div class="order-list"></div>
+        </div>
+    </center>
+    <script src="js/liste.js"></script>
+</body>
 </html>
